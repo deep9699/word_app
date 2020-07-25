@@ -1,0 +1,24 @@
+.bg
+{
+ // position: relative;
+  --background: url('../../assets/img/bg.jpg') no-repeat center center fixed;
+      background-size: cover;    
+      text-align: center;
+      overflow: hidden;
+}
+
+.card-has-background-image {
+    .card-text { 
+        padding-left: 8px; 
+        padding-right: 8px; 
+        &.is-vertically-centered {
+            position: absolute;
+            transform: translateY(-50%);
+            top: 50%;
+            width: 100%;
+            > div {
+                position: relative; 
+            }
+        }
+    }
+}

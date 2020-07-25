@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IonSlides } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab1',
@@ -7,6 +8,14 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
+  slider: IonSlides;
+
   constructor() {}
+
+  slidesDidLoad(mySlider: IonSlides)
+  {
+    this.slider = mySlider;
+    mySlider.startAutoplay();
+  }
 
 }
